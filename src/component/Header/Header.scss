@@ -1,0 +1,57 @@
+@import '../../sassStyles/_mixins';
+@import '../../sassStyles/_variables';
+
+.head-wrapper {
+    @include generate-gradient($blackblack, 5);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8vmin 2vmin;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    box-sizing: border-box;
+    z-index: 5;
+    position: fixed;
+
+    & .head-searchbar {
+        // border: 1px solid red;
+        width: 30vw;
+        justify-content: end;
+    }
+
+    & .head-profile {
+        // border: 1px solid red;
+        // width: 30vw;
+        justify-content: end;
+    }
+
+
+    // top: 0;
+    // border: 1px solid blue;
+    // display: flex;
+    // flex-wrap: wrap;
+    // align-items: center;
+    // justify-content: space-around;
+    // font-size: 2vmin;
+    // height: 20vh;
+    // width: 100vw;
+
+    & .head-logo {
+        // border: 1px solid red;
+        width: 5vw;
+    }
+
+    // & .head-searchbar {
+    //     border: 1px solid red;
+    //     width: 26vw;
+
+    // }
+
+    & .head-navbar {
+        // border: 1px solid red;
+        justify-content: flex-end;
+        // width: 40vw;
+    }
+}

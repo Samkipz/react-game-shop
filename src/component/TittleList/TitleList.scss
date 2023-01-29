@@ -1,0 +1,38 @@
+@import '../../sassStyles/_mixins';
+@import '../../sassStyles/_variables';
+
+// .Hero~.TitleList:nth-child(3) {
+//     margin-top: -10vw;
+//     position: relative;
+//     z-index: 4;
+// }
+
+// Hack for first after Hero
+.TitleList {
+    padding: 3vmin 2vmin;
+    box-sizing: border-box;
+    transition: opacity 3s ease;
+    opacity: 1;
+
+    // .Title {
+    //     @extend h2 !optional
+    // }
+
+    .titles-wrapper {
+        // border: 1px solid red;
+        display: inline-flex;
+        flex-wrap: wrap;
+        gap: 3vmin;
+
+        // width: calc(100vw - 80px);
+        box-sizing: border-box;
+        justify-content: space-between;
+
+    }
+
+    // Animation
+
+    &[data-loaded='true'] {
+        opacity: 1;
+    }
+}

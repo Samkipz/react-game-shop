@@ -1,0 +1,4 @@
+//=================== Mixins ======================= //
+@mixin generate-gradient($color, $amount) {
+    background: linear-gradient(to bottom, rgba($color, $amount) 0%, rgba($color, 0) 100%);
+}

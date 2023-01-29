@@ -1,0 +1,38 @@
+@import '../../sassStyles/_mixins';
+@import '../../sassStyles/_variables';
+
+// Search
+.Search {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    // position: absolute;
+    display: flex;
+    justify-content: center;
+    // pointer-events: none;
+
+    input {
+        font-family: $font;
+        font-weight: 300;
+        font-size: 14px;
+        height: 37px;
+        width: 60%;
+        background: transparent;
+        color: $white;
+        appearance: none;
+        border: 0;
+        border: 2px solid rgba($grey, .1);
+        outline: none;
+        border-radius: 37px;
+        padding: 0 10px;
+        pointer-events: all;
+        transition: border .25s ease, width .125s ease .125s;
+
+        &:focus {
+            border: 2px solid $red;
+            width: 100%;
+        }
+
+
+    }
+}

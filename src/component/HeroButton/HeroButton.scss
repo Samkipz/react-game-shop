@@ -1,0 +1,42 @@
+@import '../../sassStyles/_mixins';
+@import '../../sassStyles/_variables';
+
+.button-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 400px;
+    margin-top: 30px;
+
+    .Button:first-child {
+        margin-right: 10px;
+    }
+}
+
+.Button {
+    background: transparent;
+    display: flex;
+    height: 44px;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: $white;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 2px solid rgba($grey, .2);
+    border-radius: 44px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: border .125s ease, background .125s ease;
+
+    &:hover {
+        border: 2px solid $grey;
+    }
+
+    &[data-primary='true'] {
+        border: 2px solid $red;
+
+        &:hover {
+            background: $red;
+        }
+    }
+}
