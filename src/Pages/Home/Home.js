@@ -1,20 +1,38 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import userService from "../../services/user.service";
 import { Header, Slider, TitleList } from "../../component";
-import './Home.scss'
 
 
+const Home = () => {
+  const [content, setContent] = useState("");
 
-//Home Pages! ☆ ★
+  useEffect(() => {
+    userService.getPublicContent().then(
+      (response) => {
+        setContent(response.data);
+      },
+      (error) => {
+        const _content =
+          (error.response && error.response.data) ||
+          error.message ||
+          error.toString();
 
-export default function App() {
-    return (
-        <div className="homepage">
-            <Header></Header>
-            <Slider></Slider>
-            <TitleList title="Top Games" />
-            <TitleList title="Trending now" />
-            <TitleList title="Most Played" />
-        </div>
-
+        setContent(_content);
+      }
     );
-}
+  }, []);
+
+  console.log(content)
+
+  return (
+    <div className="homepage">
+      <Header></Header>
+      <Slider></Slider>
+      <TitleList title="Top Games" />
+      <TitleList title="Trending now" />
+      <TitleList title="Most Played" />
+    </div>
+  );
+};
+
+export default Home;

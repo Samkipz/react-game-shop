@@ -1,0 +1,8 @@
+.about-page {
+    display: flex;
+    flex-direction: column;
+
+    & .about-header {
+        height: 30vh;
+    }
+}

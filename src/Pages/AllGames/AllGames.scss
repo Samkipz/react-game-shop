@@ -7,7 +7,7 @@
         z-index: 99;
     }
 
-    // & .allgames {
+    // & .allgames { 
     //     border: 1px solid red;
     //     height: 80vh;
     //     display: flex;
@@ -56,14 +56,14 @@
             text-align: center;
             margin: 20px auto;
             background-color: #f0f0f0;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+            box-shadow: 0 1px 3px rgba(233, 233, 233, 0.12), 0 1px 2px rgba(199, 199, 199, 0.24);
             transition: all 0.2s cubic-bezier(.25, .8, .25, 1);
             border-radius: 5px 5px 0 0;
             text-decoration: none;
         }
 
         .link-block:hover {
-            box-shadow: 0 10px 18px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+            box-shadow: 0 10px 18px rgba(196, 193, 193, 0.25), 0 10px 10px rgba(196, 193, 193, 0.22);
         }
 
         .link-block .dundas-blue-link {
@@ -88,7 +88,7 @@
         .link-block .webinar-image-container {
             width: 100%;
             height: 200px;
-            position: relative;
+            // position: relative;
             top: 0;
             transition: all 0.5s cubic-bezier(.25, .8, .25, 1);
             z-index: 200;
@@ -144,6 +144,7 @@
             width: 100%;
             height: 100%;
             border-radius: 5px 5px 0 0;
+            z-index: -5;
         }
 
         .archive {

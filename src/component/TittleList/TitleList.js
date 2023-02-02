@@ -64,7 +64,7 @@ function TitleList(props) {
             <div className="Title" data-loaded={true}>
                 <h1>{props.title}</h1>
                 <div className="titles-wrapper">
-                    {games.map((game, index) => <SingleGame key={game.id} title={game.name} score={game.rating} overview={game.short_description} backdrop={game.background_image} />)}
+                    {games.map((game, index) => <SingleGame key={game.id} id={game.id} title={game.name} score={game.rating} overview={game.short_description} backdrop={game.background_image} />)}
                 </div>
             </div>
         </div>

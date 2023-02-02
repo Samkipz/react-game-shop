@@ -12,8 +12,10 @@ import {
     Route,
     Routes
 } from "react-router-dom";
+import { useNavigate } from 'react-router-dom'
 
 function AllGames() {
+    const navigate = useNavigate()
 
     function rateGame(rating) {
         let ratings = []
@@ -52,12 +54,12 @@ function AllGames() {
 
 
                 {filteredGames.map((game, index) =>
-                    <div className='gamecard' >
+                    <div className='gamecard'>
 
-                        <Link to={'/game-details/' + game.id} className="link-block">
+                        {/* <Link to={'/game-details/' + game.id}  className="link-block"> */}
+                        <div key={index} onClick={() => { navigate("/game-details/" + game.id) }} className="link-block" >
 
-
-                            <div className="webinar-image-container">
+                            <div key={index} className="webinar-image-container">
                                 <img src={game.background_image} alt='' />
                             </div>
 
@@ -69,7 +71,10 @@ function AllGames() {
                                 <p>{rateGame(game.rating)}</p>
                                 <span className="dundas-blue-link"> <FaCartPlus /> Add to Cart</span>
                             </div>
-                        </Link>
+
+                        </div>
+                        {/* </Link>  */}
+
                     </div>
                 )}
 

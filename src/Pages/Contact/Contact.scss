@@ -1,0 +1,8 @@
+.contact-page {
+    display: flex;
+    flex-direction: column;
+
+    & .contact-header {
+        height: 30vh;
+    }
+}

@@ -1,0 +1,65 @@
+@import '../../sassStyles/_mixins';
+@import '../../sassStyles/_variables';
+
+
+.game-details {
+    display: flex;
+    flex-direction: column;
+
+    & .header-space {
+        height: 30vh;
+    }
+
+    & .content-space {
+        padding: 2vmin;
+        height: 70vh;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        position: relative;
+
+        & .game-text-card {
+            // border: 1px solid red;
+            width: 50%;
+            border-radius: 10px;
+            padding: 2vmin;
+            background-color: rgba(0, 0, 0, 0.859);
+            opacity: 0.8;
+            // height: 60%;
+            position: relative;
+            // font-size: 2vmin;
+
+            @media screen and (max-width: 900px) {
+                height: 80%;
+                width: 100%;
+                // font-size: 4vmin;
+            }
+
+            @media screen and (max-width: 400px) {
+                // height: 80%;
+                width: 100vw;
+                font-size: 4vmin;
+            }
+
+            & .game-specs {
+                // position: absolute;
+                display: flex;
+                flex-direction: row;
+                gap: 2vmin;
+                justify-content: space-between;
+                // border: 1px solid red;
+                width: 100%;
+
+                & .spec-special {
+                    // border: 1px solid red;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    font-family: $myFontQ;
+                    font-size: 3vmin;
+                }
+            }
+        }
+    }
+}
