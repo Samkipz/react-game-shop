@@ -1,0 +1,107 @@
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    color: #ddd;
+    background-color: rgba(0, 0, 0, 0.444);
+    opacity: 0.8;
+    padding: 2vmin;
+    // height: 100vh;
+    // color: black;
+    // background-color: rgba(151, 144, 144, 0.924);
+
+    & .header {
+        height: 20vh;
+        z-index: 99;
+    }
+
+    & .content {
+        display: flex;
+        padding: 2%;
+        flex-direction: column;
+
+        & .game-space {
+            color: #ddd;
+            color: black;
+
+            & .add-game-header {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                color: #ddd;
+            }
+
+
+            #customers {
+                font-family: Arial, Helvetica, sans-serif;
+                border-collapse: collapse;
+                width: 100%;
+            }
+
+            #customers td,
+            #customers th {
+                border: 1px solid #ddd;
+                padding: 8px;
+            }
+
+            #customers tr:nth-child(even) {
+                background-color: #f2f2f2;
+            }
+
+            #customers tr:nth-child(odd) {
+                color: #ddd;
+                // background-color: #f2f2f2;
+            }
+
+            #customers tr:hover {
+                color: black;
+                background-color: #ddd;
+            }
+
+            #customers th {
+                padding-top: 12px;
+                padding-bottom: 12px;
+                text-align: left;
+                // background-color: rgba(44, 43, 43, 0.817);
+                // background-color: rgba(136, 27, 27, 0.681);
+                color: white;
+            }
+        }
+
+        & .users-space {
+            margin: 2vh 0;
+            color: black;
+
+
+            #customers {
+                font-family: Arial, Helvetica, sans-serif;
+                border-collapse: collapse;
+                width: 100%;
+            }
+
+            #customers td,
+            #customers th {
+                border: 1px solid #ddd;
+                padding: 8px;
+            }
+
+            #customers tr:nth-child(even) {
+                background-color: #f2f2f2;
+            }
+
+            #customers tr:hover {
+                color: black;
+                background-color: #ddd;
+            }
+
+            #customers th {
+                padding-top: 12px;
+                padding-bottom: 12px;
+                text-align: left;
+                // background-color: rgba(44, 43, 43, 0.817);
+                color: white;
+            }
+        }
+    }
+}
